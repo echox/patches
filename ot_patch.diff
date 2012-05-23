@@ -1,0 +1,33 @@
+351c351
+< //if defined( WANT_KEEPALIVE ) || defined( WANT_IP_FROM_PROXY )
+---
+> #if defined( WANT_KEEPALIVE ) || defined( WANT_IP_FROM_PROXY )
+364c364
+< //endif
+---
+> #endif
+603,626d602
+< 
+< 
+< // MY CODE :-)
+< 
+< 	read_ptr=http_header(ws->request, ws->header_size, "authorization");
+< 	if(read_ptr) {
+< 		
+< 		char * end_ptr = strchr(read_ptr, '\n');
+< 	
+< 		if(end_ptr) {	
+< 			char auth_hdr[end_ptr - read_ptr];
+<     		strncpy(auth_hdr, read_ptr, (end_ptr - read_ptr));
+< 
+< 			printf("Header: %s\n", auth_hdr);		
+< 		}
+< /*
+< 		while(*read_ptr != '\n') {
+<   			printf("%s ", end_ptr);
+< 			read_ptr++;
+< 		}
+< 		printf("\n");
+< */
+< 	}
+< 
